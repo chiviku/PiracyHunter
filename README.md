@@ -1,10 +1,17 @@
-# Piracy Hunter
+# Piracy Hunter - An Antipiracy web intelligence
 
 **Search Intelligence for Content Protection**
 
 Piracy Hunter uses SerpApi's Google Search results to discover, organize, and prioritize publicly visible signals of possible unauthorized content distribution. It helps content owners and investigators review potential leads and organize evidence for further investigation.
 
 The tool supports investigation; it does not establish whether a source or piece of content infringes copyright, and it does not make legal determinations.
+
+## Purpose
+
+* Many content creators, self-publishing authors and owners of intellectual property face 1 major issues.
+* They cannot sit and inspect every piracy sources in web.
+* Piracy Hunter aims to simplify the initial investigation of potential unauthorised content distribution by helping content owners and investigators discover,organize and review publicly indexed search evidence in one place.
+*It reduces the need to manually search across multiple queries and collect evidences individually,making discovery process more structured and efficient for the content owners.
 
 ## Key Features
 
