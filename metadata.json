@@ -1,0 +1,7 @@
+{
+  "name": "Piracy Hunter",
+  "description": "Public web search intelligence & evidence analysis dashboard for detecting potential unauthorized content distribution using SerpApi.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

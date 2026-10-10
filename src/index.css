@@ -1,0 +1,210 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+  --color-gotham-midnight-blue: #0B1325;
+  --color-dark-armor-gray: #01060f;
+  --color-clinical-white: #ffffff;
+  --color-concrete-gray: #227aaa;
+}
+
+body {
+  background-color: var(--color-gotham-midnight-blue);
+  color: var(--color-clinical-white);
+}
+
+[class~="bg-[#F4F7FB]"],
+[class~="bg-[#0B1F3A]"],
+[class~="bg-slate-900"] {
+  background-color: var(--color-gotham-midnight-blue) !important;
+}
+
+[class*="bg-slate-900/"] {
+  background-color: rgb(11 19 37 / 60%) !important;
+}
+
+[class~="bg-white"],
+[class~="bg-slate-50"],
+[class~="bg-slate-100"],
+[class~="bg-[#163B67]"],
+[class*="bg-slate-50/"],
+[class*="bg-slate-100/"] {
+  background-color: var(--color-dark-armor-gray) !important;
+}
+
+[class~="bg-slate-200"],
+[class~="bg-slate-300"],
+[class~="bg-slate-400"],
+[class~="bg-slate-500"],
+[class~="bg-slate-600"],
+[class~="bg-slate-700"],
+[class~="bg-slate-800"],
+[class*="bg-slate-200/"],
+[class*="bg-slate-300/"],
+[class*="bg-slate-400/"],
+[class*="bg-slate-500/"],
+[class*="bg-slate-600/"],
+[class*="bg-slate-700/"],
+[class*="bg-slate-800/"] {
+  background-color: #25304D !important;
+}
+
+[class*="text-slate-"],
+[class*="text-gray-"],
+[class~="text-[#0B1F3A]"] {
+  color: var(--color-concrete-gray) !important;
+}
+
+[class~="text-slate-900"],
+[class~="text-slate-800"],
+[class~="text-slate-700"],
+[class~="text-gray-900"],
+[class~="text-gray-800"],
+[class~="text-[#0B1F3A]"] {
+  color: var(--color-clinical-white) !important;
+}
+
+[class*="border-slate-"],
+[class*="border-gray-"] {
+  border-color: rgb(92 107 115 / 45%) !important;
+}
+
+::selection {
+  background-color: #5C6B73;
+  color: #FFFFFF;
+}
+
+.investigation-intro h3,
+.investigation-intro-points li {
+  animation: investigation-intro-enter 650ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.investigation-intro-points {
+  margin-top: 0.75rem;
+  display: grid;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.investigation-intro-points li {
+  color: var(--color-clinical-white);
+  font-size: 1rem;
+  line-height: 1.55;
+  padding-left: 1.15rem;
+  position: relative;
+}
+
+.investigation-intro-points li::before {
+  background-color: var(--color-concrete-gray);
+  border-radius: 9999px;
+  content: "";
+  height: 0.4rem;
+  left: 0;
+  position: absolute;
+  top: 0.58rem;
+  width: 0.4rem;
+}
+
+.investigation-intro-points li:nth-child(1) {
+  animation-delay: 100ms;
+}
+
+.investigation-intro-points li:nth-child(2) {
+  animation-delay: 220ms;
+}
+
+.investigation-intro-points li:nth-child(3) {
+  animation-delay: 340ms;
+}
+
+.investigation-card {
+  animation: investigation-card-enter 600ms 180ms ease-out both;
+  background:
+    radial-gradient(ellipse at top right, rgb(34 122 170 / 18%), transparent 45%),
+    var(--color-dark-armor-gray);
+  border-color: rgb(34 122 170 / 55%);
+  box-shadow: 0 18px 48px rgb(0 0 0 / 24%);
+}
+
+.investigation-field-label {
+  color: var(--color-clinical-white) !important;
+  font-size: 0.8125rem;
+}
+
+.investigation-field {
+  background-color: #0B1325 !important;
+  border: 1px solid #5C6B73 !important;
+  color: var(--color-clinical-white) !important;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.investigation-field:hover {
+  border-color: var(--color-concrete-gray) !important;
+}
+
+.investigation-field:focus {
+  border-color: #227AAA !important;
+  box-shadow: 0 0 0 3px rgb(34 122 170 / 24%);
+}
+
+.investigation-field option {
+  background-color: #0B1325;
+  color: var(--color-clinical-white);
+}
+
+.investigation-submit {
+  background: linear-gradient(135deg, #227AAA, #195D83);
+  box-shadow: 0 8px 20px rgb(34 122 170 / 24%);
+}
+
+.investigation-submit:hover:not(:disabled) {
+  background: linear-gradient(135deg, #2B91C7, #227AAA);
+  box-shadow: 0 10px 24px rgb(34 122 170 / 34%);
+  transform: translateY(-1px);
+}
+
+.investigation-submit:focus-visible {
+  box-shadow: 0 0 0 3px #0B1325, 0 0 0 5px #5C6B73;
+}
+
+.investigation-submit:disabled {
+  background: #5C6B73;
+  box-shadow: none;
+}
+
+@keyframes investigation-intro-enter {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes investigation-card-enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .investigation-intro h3,
+  .investigation-intro-points li,
+  .investigation-card {
+    animation: none;
+  }
+
+  .investigation-submit:hover:not(:disabled) {
+    transform: none;
+  }
+}
