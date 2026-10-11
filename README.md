@@ -65,7 +65,7 @@ Check `package.json` for the complete dependency list.
 
 ### 1. Clone the repository
 
-git clone YOUR_PUBLIC_REPOSITORY_URL
+git clone https://github.com/chiviku/PiracyHunter.git
 
 Open the cloned project folder in VS Code and open a terminal inside that folder.
 
