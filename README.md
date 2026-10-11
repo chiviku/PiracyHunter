@@ -2,25 +2,44 @@
 
 **Search Intelligence for Content Protection**
 
-Piracy Hunter uses SerpApi's Google Search results to discover, organize, and prioritize publicly visible signals of possible unauthorized content distribution. It helps content owners and investigators review potential leads and organize evidence for further investigation.
+Piracy Hunter helps content owners, independent creators, authors, publishers, and investigators discover and organize publicly indexed search results that may indicate unauthorized content distribution.
+
+By combining targeted Google Search queries through SerpApi with evidence classification, and optional URL verification, Piracy Hunter brings potential leads into a single interface for human review.
 
 The tool supports investigation; it does not establish whether a source or piece of content infringes copyright, and it does not make legal determinations.
 
+<img width="1348" height="663" alt="Screenshot 2026-10-11 232440" src="https://github.com/user-attachments/assets/f98be030-df0d-44f7-b396-a1ef139fc268" />
+
+
+
 ## Purpose
 
-* Many content creators, self-publishing authors and owners of intellectual property face 1 major issues.
-* They cannot sit and inspect every piracy sources in web.
-* Piracy Hunter aims to simplify the initial investigation of potential unauthorised content distribution by helping content owners and investigators discover,organize and review publicly indexed search evidence in one place.
-*It reduces the need to manually search across multiple queries and collect evidences individually,making discovery process more structured and efficient for the content owners.
+* Content creators, self-publishing authors, filmmakers, publishers, and intellectual property owners struggle to identify potentially unauthorized distribution of their work across the public web.
+* Manually searching for potential sources and organizing relevant URLs can be time-consuming.
+* Piracy Hunter aims to streamline this initial discovery process by bringing publicly indexed search results into a structured investigation dashboard.
+* Once the owners verify their work being distributed without authorization,they can export those URL's and can submit copyright issues and take necessary action to bring those sources down.
+* The pure intension of this project is to support original creators and legitimate content-protection efforts. Findings require independent verification before any allegation or enforcement action.
+
 
 ## Key Features
 
 * **Live Search:** Uses SerpApi to retrieve Google Search results for a selected content type.
 * **Evidence Classification:** Organizes results using source information and distribution-related signals.
-* **Investigation Dashboard:** Presents findings, metrics, relevance indicators, and priority levels for review.
+* **Investigation Dashboard:** Presents findings, relevance indicators, and priority levels for review.
 * **URL Verification:** Offers an optional live URL check to assess reachability and redirects.
 * **Safety Checks:** Provides supplementary URL safety information where supported. Safety-check results are not guarantees that a URL is safe or legitimate.
+* **Verify Source:** Allows users to open and inspect a discovered source for further investigation. 
 * **Investigation Reports:** Helps organize findings for further review and documentation.
+
+## How It Works
+
+1. **Select a target:** Enter a content title and choose the relevant content category.
+2. **Search:** The backend uses SerpApi to retrieve results from targeted Google Search queries.
+3. **Process findings:** The application deduplicates URLs and organizes results using source information and distribution-related signals.
+4. **Review evidence:** Explore the investigation dashboard, relevance indicators, and priority classifications.
+5. **Investigate further:** Use optional URL verification and review the collected findings to decide which leads warrant additional investigation.
+
+The results depend on search-engine indexing and the queries used. Every finding should be treated as a potential lead rather than proof of infringement.
 
 
 ## Technology Stack
@@ -35,6 +54,8 @@ The tool supports investigation; it does not establish whether a source or piece
 
 Check `package.json` for the complete dependency list.
 
+## Set up instructions : 
+
 ## Run Locally
 
 ### Prerequisites
@@ -44,12 +65,9 @@ Check `package.json` for the complete dependency list.
 
 ### 1. Clone the repository
 
-```bash
-git clone YOUR_REPOSITORY_URL
-cd PiracyHunter
-```
+git clone YOUR_PUBLIC_REPOSITORY_URL
 
-Replace `YOUR_REPOSITORY_URL` with the repository's actual URL.
+Open the cloned project folder in VS Code and open a terminal inside that folder.
 
 ### 2. Install dependencies
 
@@ -75,7 +93,7 @@ Replace the placeholder with your actual key. Never commit `.env` or publish API
 npm run dev
 ```
 
-Follow the local URL printed by the development server.
+Follow the local URL printed by the development server. (Run 'npm run dev' again if first try fails)
 
 ### 5. Explore the application
 
@@ -121,9 +139,6 @@ Piracy Hunter is an investigative aid, not a substitute for legal advice or a de
 Live Search requires a SerpApi API key supplied through a local environment variable.
 
 * Keep `.env` out of version control.
-* Never hardcode API keys in source files.
-* Do not publish credentials in documentation, screenshots, or demo recordings.
-* Use your own SerpApi account and comply with its applicable terms and usage limits.
 
 ## Project Status
 
